@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <t t-name="digital_clock.DigitalClock">
+        <div class="clock-container">
+            <h2>Digital Clock</h2>
+            <h1 t-esc="state.time"/>
+        </div>
+    </t>
+</odoo>
