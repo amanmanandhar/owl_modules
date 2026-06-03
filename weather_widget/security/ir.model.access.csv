@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_weather_widget_weather_widget,weather_widget.weather_widget,model_weather_widget_weather_widget,base.group_user,1,1,1,1

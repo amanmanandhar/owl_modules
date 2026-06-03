@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="weather_widget.list">
+      <field name="name">weather_widget list</field>
+      <field name="model">weather_widget.weather_widget</field>
+      <field name="arch" type="xml">
+        <list>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </list>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="weather_widget.action_window">
+      <field name="name">weather_widget window</field>
+      <field name="res_model">weather_widget.weather_widget</field>
+      <field name="view_mode">list,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="weather_widget.action_server">
+      <field name="name">weather_widget server</field>
+      <field name="model_id" ref="model_weather_widget_weather_widget"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "list,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="weather_widget" id="weather_widget.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="weather_widget.menu_1" parent="weather_widget.menu_root"/>
+    <menuitem name="Menu 2" id="weather_widget.menu_2" parent="weather_widget.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="weather_widget.menu_1_list" parent="weather_widget.menu_1"
+              action="weather_widget.action_window"/>
+    <menuitem name="Server to list" id="weather_widget" parent="weather_widget.menu_2"
+              action="weather_widget.action_server"/>
+-->
+  </data>
+</odoo>

@@ -1,0 +1,13 @@
+.weather-box{
+    padding: 20px;
+    border: 1px solid #ddd;
+    width: 300px;
+}
+.weather-box input{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.result{
+    margin-top: 10px;
+}

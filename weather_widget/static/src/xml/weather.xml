@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates xml:space="preserve">
+    <t t-name="weather_widget.Weather">
+        <div class="weather-box">
+            <input type="text" placeholder="Enter City" t-model="state.city"/>
+            <button t-on-click="getWeather">Get Weather</button>
+            <div class="results">
+                <p>Temperature: <t t-esc="state.temp"/></p>
+                <p>Conditions: <t t-esc="state.condition"/></p>
+            </div>
+        </div>
+    </t>
+
+</templates>
