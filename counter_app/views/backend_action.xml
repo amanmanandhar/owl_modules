@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="action_counter" model="ir.actions.client">
+        <field name="name">Backend Action</field>
+        <field name="tag">counter_app</field>
+    </record>
+    <menuitem id="counter_menu_root" name="OWL Backend Counter" sequence="8"/>\
+    <menuitem id="counter_menu" name="Counting App" parent="counter_menu_root" action="action_counter" sequence="7"/>
+</odoo>

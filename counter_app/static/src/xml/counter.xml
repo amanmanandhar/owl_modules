@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="counter_app.Counting">
+        <div class="p-4">
+            <h1>Counter App</h1>
+            <h2 t-esc="state.counter"></h2>
+            <button class="btn btn-primary" t-on-click="increment">Increment</button>
+            <button class="btn brn-secondary" t-on-click="decrement">Decrement</button>
+        </div>
+    </t>
+</templates>
