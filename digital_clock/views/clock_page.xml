@@ -3,8 +3,7 @@
     <template id="clock_page" name="Clock Page">
         <t t-call="website.layout">
             <div class="container mt-5">
-                <h1 class="text-center">Digital Clock</h1>
-                <div id="clock_root"></div>
+                <owl-component name="digital_clock.DigitalClock"/>
             </div>
         </t>
     </template>

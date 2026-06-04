@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <t t-name="digital_clock.DigitalClock">
+    <t t-name="digital_clock.DigitalClockTemplate">
         <div class="clock-container">
             <h2>Digital Clock</h2>
             <h1 t-esc="state.time"/>

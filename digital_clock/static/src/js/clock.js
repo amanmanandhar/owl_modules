@@ -1,8 +1,10 @@
 /** @odoo-module **/
 
 import { Component, useState, onMounted, onWillUnmount } from "@odoo/owl";
+import { registry } from "@web/core/registry";
 
 export class DigitalClock extends Component {
+    static template = 'digital_clock.DigitalClockTemplate';
     setup() {
         this.state = useState({
             time: new Date().toLocaleTimeString(),
@@ -22,4 +24,4 @@ export class DigitalClock extends Component {
     }
 }
 
-DigitalClock.template = "digital_clock.DigitalClock";
+registry.category("public_components").add("digital_clock.DigitalClock", DigitalClock);
