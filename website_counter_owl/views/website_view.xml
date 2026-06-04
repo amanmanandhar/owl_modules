@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="counter_page" name="Counter Page">
+        <t t-call="website.layout">
+            <owl-component name="website_counter_owl.CounterApp"/>
+        </t>
+    </template>
+</odoo>
