@@ -6,12 +6,13 @@
 
             <div class="d-flex gap-2 mb-4">
                 <input type="text" class="form-control" t-model="state.task" placeholder="Enter the task"/>
-                <button class="btn btn-primary" t-on-click="addTask">Add task</button>
+                <button class="btn btn-primary" t-on-click="addTask"><t t-if="state.editingId">Update</t><t t-else="">Add Task</t></button>
             </div>
             <ul class="list-group ">
                 <t t-foreach="state.todos" t-as="todo" t-key="todo.id">
                     <li class="list-group-item d-flex justify-content-between">
                         <span t-esc="todo.name"/>
+                        <button class="btn btn-warning btn-sm me-2" t-on-click="() => this.editTask(todo.id)">Edit</button>
                         <button class="btn btn-danger btn-sm" t-on-click="() => deleteTask(todo.id)">Delete task</button>
                     </li>
                 </t>

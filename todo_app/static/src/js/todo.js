@@ -10,17 +10,41 @@ export class TodoApp extends Component {
         this.state = useState({
             task: "",
             todos: [],
+            editingId: null,
         });
     }
-    addTask(){
-        if(!this.state.task.trim()){
-            return;
+    addTask() {
+    if (!this.state.task.trim()) {
+        return;
+    }
+
+    if (this.state.editingId !== null) {
+        const index = this.state.todos.findIndex(
+            todo => todo.id === this.state.editingId
+        );
+
+        if (index !== -1) {
+            this.state.todos[index].name = this.state.task;
         }
+
+        this.state.editingId = null;
+    } else {
         this.state.todos.push({
             id: Date.now(),
             name: this.state.task,
         });
-        this.state.task = "";
+    }
+
+    this.state.task = "";
+}
+    editTask(id){
+        const todo = this.state.todos.find(
+            (todo) => todo.id === id
+        );
+        if (todo){
+            this.state.task = todo.name;
+            this.state.editingId = id;
+        }
     }
     deleteTask = (id) => {
         this.state.todos = this.state.todos.filter(
