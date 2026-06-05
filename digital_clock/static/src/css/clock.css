@@ -1,0 +1,32 @@
+.clock-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    background: #0f172a;   /* dark navy background */
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.clock-container h2 {
+    color: #94a3b8;
+    font-size: 18px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.clock-container h1 {
+    font-size: 64px;
+    font-weight: bold;
+    font-family: "Courier New", monospace;
+    color: #00ffcc;
+    letter-spacing: 3px;
+    text-shadow:
+        0 0 5px #00ffcc,
+        0 0 10px #00ffcc,
+        0 0 20px #00ffcc,
+        0 0 40px #00ffcc;
+}

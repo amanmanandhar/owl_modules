@@ -13,6 +13,7 @@
         'web.assets_frontend':[
             'digital_clock/static/src/js/clock.js',
             'digital_clock/static/src/xml/clock.xml',
+            'digital_clock/static/src/css/clock.css',
         ]
     },
     'data': [
