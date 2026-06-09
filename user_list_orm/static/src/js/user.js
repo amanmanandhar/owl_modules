@@ -1,6 +1,6 @@
 /** @odoo-module **/
 
-import { Component, useState } from "@odoo/owl";
+import { Component, useState, onWillStart } from "@odoo/owl";
 import { useService } from "@web/core/utils/hooks";
 import { registry } from "@web/core/registry";
 
@@ -10,6 +10,9 @@ export class UserList extends Component {
         this.orm = useService("orm");
         this.state = useState({
             users: [],
+        });
+        onWillStart(async ()=>{
+           await this.loadEmployees();
         });
     }
     async loadEmployees(){

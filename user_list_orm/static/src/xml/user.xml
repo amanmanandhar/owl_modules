@@ -1,28 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates>
         <t t-name="user_list_orm.Template">
-            <div class="container container-fluid">
+            <div class="user-list-orm">
                 <div class="user-list-body p-3">
                     <h4>Users list</h4>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Email</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr t-foreach="state.users" t-as="user" t-key="user.id">
-                                <td>
-                                    <t t-esc="user.name"/>
-                                </td>
-                                <td>
-                                    <t t-esc="user.login"/>
-                                </td>
-                            </tr>
-                        </tbody>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-user-table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="state.users" t-as="user" t-key="user.id">
+                                    <td>
+                                        <t t-esc="user.name"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="user.email"/>
+                                    </td>
+                                </tr>
+                            </tbody>
 
-                    </table>
+                        </table>
+                    </div>
                 </div>
 
             </div>

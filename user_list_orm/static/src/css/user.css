@@ -1,0 +1,38 @@
+.user-list-orm {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.user-list-body {
+    width: 100%;
+    max-width: 700px;
+    background: #fff;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-table thead {
+    background: #714b67;
+    color: white;
+}
+
+.user-table th,
+.user-table td {
+    padding: 10px 14px;
+    text-align: left;
+}
+
+.user-table tbody tr {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.user-table tbody tr:hover {
+    background: #f6f3f5;
+}

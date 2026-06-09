@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "employee_list_orm",
+    'name': "user_list_orm",
 
     'summary': "Short (1 phrase/line) summary of the module's purpose",
 
@@ -24,6 +24,7 @@ Long description of module's purpose
         'web.assets_frontend': [
             'user_list_orm/static/src/js/user.js',
             'user_list_orm/static/src/xml/user.xml',
+            'user_list_orm/static/src/css/user.css',
         ],
     },
 
