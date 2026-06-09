@@ -8,7 +8,7 @@
     'author': "Aman Manandhar",
     'category': 'website',
     'version': '18.0.1.0.0',
-    'depends': ['web,website'],
+    'depends': ['web','website'],
     'assets': {
         'web.assets_frontend': [
             'user_list_orm/static/src/js/user.js',
