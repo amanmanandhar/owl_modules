@@ -23,7 +23,7 @@
                                     </td>
                                     <td class="text-center ">
                                         <button type="button" string="Edit" class="btn btn-primary btn-sm me-2"><i class="fa fa-pencil"/>Edit</button>
-                                        <button type="button" string="Delete" class="btn btn-danger btn-sm"><i class="fa fa-trash"/>Delete</button>
+                                        <button type="button" string="Delete" class="btn btn-danger btn-sm " t-on-click="() => this.deleteUser(user)"><i class="fa fa-trash"/>Delete</button>
                                     </td>
                                 </tr>
                             </tbody>
