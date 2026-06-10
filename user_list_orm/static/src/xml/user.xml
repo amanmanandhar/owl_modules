@@ -34,7 +34,7 @@
                                     <td class="text-center ">
                                         <t t-if="state.editingUser and state.editingUser.id === user.id">
                                             <button type="button" class="btn btn-primary btn-sm me-2" t-on-click="saveUser">Save</button>
-                                            <button type="button" class="btn btn-secondary btn-sm me-2" t-on-click="() => state.editingUser = null">Cancel</button>
+                                            <button type="button" class="btn btn-secondary btn-sm me-2" t-on-click="cancelEdit">Cancel</button>
                                         </t>
                                         <t t-else="">
                                             <button type="button" string="Edit" class="btn btn-primary btn-sm me-2" t-on-click="() => this.editUser(user)"><i class="fa fa-pencil"/>Edit</button>

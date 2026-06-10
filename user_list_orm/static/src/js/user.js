@@ -47,5 +47,11 @@ export class UserList extends Component {
         this.state.editingUser = null;
         await this.loadEmployees();
     }
+    cancelEdit(){
+        this.state.editingUser = null;
+        this.notification.add("User cancelled successfully",{
+            type: "warning",
+        })
+    }
 }
 registry.category('public_components').add('user_list_view', UserList)
