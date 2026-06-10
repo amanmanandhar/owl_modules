@@ -16,14 +16,30 @@
                             <tbody>
                                 <tr t-foreach="state.users" t-as="user" t-key="user.id">
                                     <td>
-                                        <t t-esc="user.name"/>
+                                        <t t-if="state.editingUser and state.editingUser.id === user.id">
+                                            <input type="text" class="form-control" t-model="state.editingUser.name"/>
+                                        </t>
+                                        <t t-else="">
+                                            <t t-esc="user.name"/>
+                                        </t>
                                     </td>
                                     <td>
-                                        <t t-esc="user.email"/>
+                                        <t t-if="state.editingUser and state.editingUser.id === user.id">
+                                            <input type="text" class="form-control" t-model="state.editingUser.email"/>
+                                        </t>
+                                        <t t-else="">
+                                            <t t-esc="user.email"/>
+                                        </t>
                                     </td>
                                     <td class="text-center ">
-                                        <button type="button" string="Edit" class="btn btn-primary btn-sm me-2"><i class="fa fa-pencil"/>Edit</button>
-                                        <button type="button" string="Delete" class="btn btn-danger btn-sm " t-on-click="() => this.deleteUser(user)"><i class="fa fa-trash"/>Delete</button>
+                                        <t t-if="state.editingUser and state.editingUser.id === user.id">
+                                            <button type="button" class="btn btn-primary btn-sm me-2" t-on-click="saveUser">Save</button>
+                                            <button type="button" class="btn btn-secondary btn-sm me-2" t-on-click="() => state.editingUser = null">Cancel</button>
+                                        </t>
+                                        <t t-else="">
+                                            <button type="button" string="Edit" class="btn btn-primary btn-sm me-2" t-on-click="() => this.editUser(user)"><i class="fa fa-pencil"/>Edit</button>
+                                            <button type="button" string="Delete" class="btn btn-danger btn-sm " t-on-click="() => this.deleteUser(user)"><i class="fa fa-trash"/>Delete</button>
+                                        </t>
                                     </td>
                                 </tr>
                             </tbody>

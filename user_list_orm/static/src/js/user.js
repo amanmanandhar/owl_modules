@@ -11,6 +11,7 @@ export class UserList extends Component {
         this.notification = useService("notification");
         this.state = useState({
             users: [],
+            editingUser: null,
         });
         onWillStart(async ()=>{
            await this.loadEmployees();
@@ -31,6 +32,17 @@ export class UserList extends Component {
             type: "success",
         });
         await this.loadEmployees()
+    }
+    editUser(user){
+        this.state.editingUser = { ...user };
+    }
+    async saveUser(user){
+        await this.orm.write('res.users',[this.state.editingUser.id], {
+            name: this.state.editingUser.name,
+            email: this.state.editingUser.email,
+        });
+        this.state.editingUser = null;
+        await this.loadEmployees();
     }
 }
 registry.category('public_components').add('user_list_view', UserList)
