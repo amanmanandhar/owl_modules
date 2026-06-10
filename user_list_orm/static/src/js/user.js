@@ -41,6 +41,9 @@ export class UserList extends Component {
             name: this.state.editingUser.name,
             email: this.state.editingUser.email,
         });
+        this.notification.add("User saved successfully",{
+            type: "success",
+        })
         this.state.editingUser = null;
         await this.loadEmployees();
     }
