@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="autosave_form_minicrm.AutoSaveFormTemplate">
+        <div class="card p-3">
+            <h3>Mini CRM Auto Save Form</h3>
+            <input type="text" class="form-control mb-2" placeholder="Enter name" t-on-input="(ev) => this.onInput('name', ev)"/>
+            <input type="email" class="form-control mb-2" placeholder="Enter email" t-on-input="ev => this.onInput('email', ev)"/>
+            <input type="phone" class="form-control mb-2" placeholder="Enter number" t-on-input="ev => this.onInput('phone', ev)"/>
+            <span t-esc="state.saveStatus"/>
+        </div>
+    </t>
+</templates>
