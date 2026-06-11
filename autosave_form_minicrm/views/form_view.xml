@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="mini_crm" name="Mini CRM View">
+        <t t-call="webiste.layout">
+            <owl-component name="auto_save_form"/>
+        </t>
+    </template>
+</odoo>
