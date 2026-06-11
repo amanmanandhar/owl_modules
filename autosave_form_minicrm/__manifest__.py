@@ -1,18 +1,23 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "autosave_form_minicrm",
-    'summary': "Short (1 phrase/line) summary of the module's purpose",
+    'name': "Mini CRM",
+    'summary': "Saving form after user releases writing",
     'description': """
-        Long description of module's purpose
+        Auto save form after stopping writing for certain time and hit crm and creates the details
     """,
-    'author': "My Company",
-    'website': "https://www.yourcompany.com",
-    'category': 'Uncategorized',
-    'version': '0.1',
-    'depends': ['base'],
+    'author': "Aman Manandhar",
+    'category': 'website',
+    'version': '18.0.1.0.0',
+    'depends': ['web','website'],
+    'assets': {
+        'web.assets_frontend': [
+            'autosave_form_minicrm/static/src/js/auto_save.js',
+            'autosave_form_minicrm/static/src/xml/auto_save.xml',
+        ],
+    },
     'data': [
-        'views/views.xml',
-        'views/templates.xml',
+        'views/form_view.xml',
     ],
+    'installable': True,
 }
 
