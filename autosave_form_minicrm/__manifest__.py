@@ -13,6 +13,7 @@
         'web.assets_frontend': [
             'autosave_form_minicrm/static/src/js/auto_save.js',
             'autosave_form_minicrm/static/src/xml/auto_save.xml',
+            'autosave_form_minicrm/static/src/css/auto_save.css',
         ],
     },
     'data': [

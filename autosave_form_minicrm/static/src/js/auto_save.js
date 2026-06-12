@@ -1,7 +1,7 @@
 /** @odoo-module **/
 
 import { Component, useState } from "@odoo/owl";
-import { useService } from "@web/core/utils/hook";
+import { useService } from "@web/core/utils/hooks";
 import { registry } from "@web/core/registry";
 
 export class AutoSaveForm extends Component {
@@ -23,26 +23,30 @@ export class AutoSaveForm extends Component {
         this.saveTimeout = setTimeout(() => {
             this.autoSave();},1000);
     }
-    async autoSave(){
+    async autoSave() {
         try {
             this.state.saveStatus = "saving...";
+
             const vals = {
                 name: this.state.name,
-                email: this.state.email,
+                email_from: this.state.email,
                 phone: this.state.phone,
             };
+
             if (this.state.id) {
                 await this.orm.write(
-                    'crm.lead',
+                    "crm.lead",
                     [this.state.id],
                     vals
                 );
             } else {
-                this.state.id = await this.orm.create(
-                    'crm.lead',
+                const ids = await this.orm.create(
+                    "crm.lead",
                     [vals]
                 );
+                this.state.id = ids[0];
             }
+
             this.state.saveStatus = "Saved";
         } catch (error) {
             console.error(error);
