@@ -1,0 +1,26 @@
+<odoo>
+    <record id="welcome_user" model="ir.ui.view">
+        <field name="name">welcome.user.view</field>
+        <field name="model">welcome.user</field>
+        <field name="arch" type="xml">
+            <form string="Welcome">
+                <sheet>
+                    <h2>
+                        <field name="message" readonly="1"/>
+                    </h2>
+                </sheet>
+                <footer>
+                    <button string="continue"
+                            class="btn-primary"
+                            special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="action_welcome" model="ir.actions.act_window">
+        <field name="name">action.welcome</field>
+        <field name="res_model">welcome.user</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>
