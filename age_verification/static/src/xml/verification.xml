@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<templates xml:space="preserve">
+    <t t-name="age_verification.AgeVerificationTemplate" owl="1">
+        <t t-if="state.showModal">
+            <div class="age-modal">
+                <div class="age-modal-content">
+                    <p>Are you 18+ or older?</p>
+                    <div class="buttons">
+                        <button t-on-click="allowEntry">
+                            Yes, I am
+                        </button>
+                        <button t-on-click="denyEntry">
+                            No
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </t>
+</templates>
