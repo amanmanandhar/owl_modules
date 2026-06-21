@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="add_team_snippet" inherit_id="website.snippets" name="Team Snippet">
+        <xpath expr="//div[@id='snippet_structure]" position="inside">
+            <t t-snippet="website_team_snippet.team_member_snippet"/>
+        </xpath>
+    </template>
+
+</odoo>
