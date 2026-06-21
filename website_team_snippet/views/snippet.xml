@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="team_member_snippet" name="Team Member">
+        <section class="oe_team_snippet">
+            <div class="container text-center">
+                <h3>Aman Manandhar</h3>
+                <p>Odoo Developer</p>
+            </div>
+        </section>
+    </template>
+
+</odoo>
