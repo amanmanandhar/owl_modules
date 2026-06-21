@@ -1,19 +1,17 @@
 # -*- coding: utf-8 -*-
 {
     'name': "website_team_snippet",
-    'summary': "Short (1 phrase/line) summary of the module's purpose",
+    'summary': "Simple module to learn snippet",
     'description': """
-        Long description of module's purpose
+        Add simple simple snippet in website
     """,
-    'author': "My Company",
-    'website': "https://www.yourcompany.com",
-    'category': 'Uncategorized',
-    'version': '0.1',
+    'author': "Aman Manandhar",
+    'category': 'Website',
+    'version': '18.0.1.0.0',
     'depends': ['base'],
     'data': [
-        # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'views/snippet.xml',
+        'views/snippet_website.xml',
     ],
     'installable': True,
 }
