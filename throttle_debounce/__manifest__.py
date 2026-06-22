@@ -18,17 +18,20 @@ Long description of module's purpose
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
-
+    'depends': ['website'],
+    'assets': {
+        'web.assets_frontend': [
+            'throttle_debounce/static/src/js/throttle_debounce_demo.js',
+            'throttle_debounce/static/src/xml/throttle_debounce_demo.xml',
+        ],
+    },
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
+        'views/throttle_debounce_views.xml',
     ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
-    ],
+    'installable': True,
 }
 

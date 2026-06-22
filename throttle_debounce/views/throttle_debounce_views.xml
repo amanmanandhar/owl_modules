@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="throttle_debounce_view" name="Throttle Debounce View">
+        <t t-call="website.layout">
+            <owl-component name="throttle_example"/>
+        </t>
+    </template>
+</odoo>
