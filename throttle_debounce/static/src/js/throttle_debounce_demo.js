@@ -7,9 +7,10 @@ export class ThrottleDebouceDemo extends Component{
         this.state = useState({
             text: '',
             mode: 'throttle',
-            call: 0,
+            calls: 0,
         });
         this.lastThrottleRun = 0;
+        this.debounceTimer = null;
         useEffect(
             () => {
                 if (this.state.mode === "throttle") {
@@ -23,15 +24,16 @@ export class ThrottleDebouceDemo extends Component{
     }
     runThrottle(){
         const now = Date.now();
-        if (now - this.lastThrottleRun > 1000){
+        if (now - this.lastThrottleRun > 2000){
             this.lastThrottleRun = now;
             this.fakeApiCall();
         }
     }
     runDebounce(){
-        const timer = setTimeout(()=>{
+        clearTimeout(this.debounceTimer);
+        this.debounceTimer = setTimeout(()=>{
             this.fakeApiCall();
-        }, 1000);
+        }, 2000);
     }
     fakeApiCall(){
         this.state.calls++;
@@ -46,7 +48,7 @@ export class ThrottleDebouceDemo extends Component{
         this.state.mode = "throttle";
     }
     setDebounce(){
-        this.state.mode = 'Debounce';
+        this.state.mode = 'debounce';
     }
 }
 registry.category('public_components').add('throttle_example',ThrottleDebouceDemo)
