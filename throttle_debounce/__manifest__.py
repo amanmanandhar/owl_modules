@@ -23,6 +23,7 @@ Long description of module's purpose
         'web.assets_frontend': [
             'throttle_debounce/static/src/js/throttle_debounce_demo.js',
             'throttle_debounce/static/src/xml/throttle_debounce_demo.xml',
+            'throttle_debounce/static/src/scss/throttle_debounce.scss',
         ],
     },
     # always loaded

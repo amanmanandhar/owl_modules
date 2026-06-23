@@ -1,0 +1,94 @@
+.throttle-demo-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #e9f0ff, #f7f9fc);
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+
+    .throttle-demo-card {
+        width: 420px;
+        background: #fff;
+        border-radius: 16px;
+        padding: 24px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        transition: transform 0.2s ease;
+
+        &:hover {
+            transform: translateY(-3px);
+        }
+
+        .throttle-demo-title {
+            text-align: center;
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #1f2a44;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 16px;
+
+            .btn {
+                flex: 1;
+                padding: 10px;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                font-weight: 600;
+                transition: all 0.2s ease;
+
+                &.btn-throttle {
+                    background: #2563eb;
+                    color: #fff;
+
+                    &:hover {
+                        background: #1d4ed8;
+                    }
+                }
+
+                &.btn-debounce {
+                    background: #16a34a;
+                    color: #fff;
+
+                    &:hover {
+                        background: #15803d;
+                    }
+                }
+            }
+        }
+
+        .info-box {
+            background: #f1f5f9;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #d1d5db;
+            outline: none;
+            transition: 0.2s ease;
+
+            &:focus {
+                border-color: #6366f1;
+                box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+            }
+        }
+
+        .stats {
+            margin-top: 12px;
+            padding: 10px;
+            background: #eef2ff;
+            border-radius: 10px;
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+}
